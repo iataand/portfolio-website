@@ -12,7 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        title: "Bebas Neue, serif",
+        poppins: ["Poppins", "sans"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 } satisfies Config;
