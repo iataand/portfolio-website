@@ -301,18 +301,28 @@ img, video {
   display: none;
 }
 
-.font-title {
-  font-family: Bebas Neue, serif;
+:root {
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.font-title {
+  font-family: Bebas Neue, serif;
 }
 
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-accent {
+  color: var(--accent);
 }
 
 .antialiased {
@@ -329,6 +339,7 @@ img, video {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #d3e97a;
   }
 }
 
