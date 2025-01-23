@@ -1,20 +1,8 @@
 services:
-  portfolio-website:
+  with-docker-multi-env-production:
     build:
       context: .
-      dockerfile: Dockerfile
-    container_name: next-app
+      dockerfile: ./Dockerfile
+    image: with-docker-multi-env-production
     ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=development
-    volumes:
-      - .:/app
-    working_dir: /app
-    command: "npm run dev"  # Start the development server
-    networks:
-      - nextjs-network
-
-networks:
-  nextjs-network:
-    driver: bridge
+      - "3003:3000"
