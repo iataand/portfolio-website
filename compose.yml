@@ -1,8 +1,21 @@
 services:
-  with-docker-multi-env-production:
+  reverse-proxy:
+    image: traefik:v3.1
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker"
+    ports:
+      # The HTTP Port
+      - "80:80" 
+      # The Web Ui (enabled by --api.insecure=true)
+      - "8080:8080"
+    volumes:
+      # So that Traefik can listen to Docker events
+      - /var/run/docker.sock:/var/run/docker.sock
+  portfolio-prod:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: portfolio-website-production
+    image: portfolio-prod
     ports:
       - "3003:3000"
