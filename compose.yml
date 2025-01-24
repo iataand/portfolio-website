@@ -17,5 +17,10 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: portfolio-prod
-    ports:
-      - "3003:3000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.hhtp.routers.portfolio-prod.entrypoints=websecure"
+      - "traefik.http.routers.portfolio-prod.tls.certresolver=myresolver"
+    volume:
+      letsencrypt:
+
