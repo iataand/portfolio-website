@@ -1,21 +1,20 @@
 services:
+  watchtower:
+    image: containrrr/watchtower
+    command: 
+      - "--label-enable"
+      - "--interval"
+      - "30"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
   reverse-proxy:
     image: traefik:v3.1
     command:
       - "--providers.docker"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entryPoints.websecure.address=:443"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=andrei.iatan00@gmail.com"
-      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
-      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
     ports:
       # The HTTP Port
-      - "80:80" 
-      # The Web Ui (enabled by --api.insecure=true)
-      - "8080:8080"
+      - "443:443" 
+      - "80:80"
     volumes:
       # So that Traefik can listen to Docker events
       - /var/run/docker.sock:/var/run/docker.sock
@@ -23,11 +22,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: portfolio-prod
+    image: portfolio-prod:prod
     labels:
       - "traefik.enable=true"
-      - "traefik.hhtp.routers.portfolio-prod.entrypoints=websecure"
-      - "traefik.http.routers.portfolio-prod.tls.certresolver=myresolver"
-volumes:
-  letsencrypt:
+      - "traefik.http.routers.portfolio-prod.rule=Host(`andrei-iatan.com`)"
+      - "com.centurylinklabs.watchtower.enable=true"
 
