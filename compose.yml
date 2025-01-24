@@ -13,13 +13,10 @@ services:
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
     ports:
       # The HTTP Port
-      - "80:80" 
-      # The Web Ui (enabled by --api.insecure=true)
-      - "8080:8080"
+      - "443:443"
     volumes:
-      volumes:
-      - letsencrypt:/letsencrypt
       # So that Traefik can listen to Docker events
+      - letsencrypt:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
   portfolio-prod:
     build:
@@ -28,8 +25,8 @@ services:
     image: portfolio-prod
     labels:
       - "traefik.enable=true"
-      - "traefik.hhtp.routers.portfolio-prod.entrypoints=websecure"
+      - "traefik.http.routers.portfolio-prod.rule=Host(`andrei-iatan.com`)"
+      - "traefik.http.routers.portfolio-prod.entrypoints=websecure"
       - "traefik.http.routers.portfolio-prod.tls.certresolver=myresolver"
 volumes:
   letsencrypt:
-
