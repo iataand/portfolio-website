@@ -28,6 +28,6 @@ services:
       - "traefik.enable=true"
       - "traefik.hhtp.routers.portfolio-prod.entrypoints=websecure"
       - "traefik.http.routers.portfolio-prod.tls.certresolver=myresolver"
-  volume:
-    letsencrypt:
+volumes:
+  letsencrypt:
 
