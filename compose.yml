@@ -2,6 +2,7 @@ services:
   watchtower:
     image: containrrr/watchtower
     command: 
+      - "--debug"
       - "--label-enable"
       - "--interval"
       - "30"
@@ -22,7 +23,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: portfolio-prod:prod
+    image: ghcr.io/iataand/portfolio-prod:latest
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portfolio-prod.rule=Host(`andrei-iatan.com`)"
