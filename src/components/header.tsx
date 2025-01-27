@@ -16,9 +16,9 @@ export default function Header() {
       <p className="font-title text-4xl text-muted">Andrei Iatan </p>
       <div className="hidden sm:block">
         <div className="flex gap-4">
-          <p>Work</p>
+          {/* <p>Work</p>
           <p>About</p>
-          <p>Contact</p>
+          <p>Contact</p> */}
         </div>
       </div>
       <div className="sm:hidden">

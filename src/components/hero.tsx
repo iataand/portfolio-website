@@ -14,9 +14,9 @@ export default function Hero() {
           accessible and user friendly websites.
         </p>
         <div className="mt-4 flex gap-6">
-          <Button variant="accent" size="lg">
+          {/* <Button variant="accent" size="lg">
             CONTACT ME
-          </Button>
+          </Button> */}
           <Link href="https://www.linkedin.com/in/andrei-sebastian-iatan-8a026919b/">
             <Button variant="secondary" size="icon">
               <p className="font-extrabold text-accent">in</p>
