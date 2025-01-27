@@ -3,7 +3,7 @@ export default function Hero() {
     <div className="mt-10 flex flex-wrap justify-between">
       <div className="max-w-[544px]">
         <p className="font-title text-6xl md:text-8xl">
-          Hi, I am <br /> Andrei Iatan.
+          Hi, I am <br /> Andrei Iatan. | UPDATE
         </p>
         <p className="font-light text-secondary">
           A Bucharest based front-end developer passionate about building
