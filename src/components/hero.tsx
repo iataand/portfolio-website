@@ -1,6 +1,3 @@
-import Image from "next/image";
-import portraitImage from "@/assets/images/image.png";
-
 export default function Hero() {
   return (
     <div className="mt-10 flex flex-wrap justify-between">
