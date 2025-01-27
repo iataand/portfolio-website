@@ -13,6 +13,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         accent: "var(--accent)",
+        secondary: "var(--secondary)",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
@@ -24,10 +25,6 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -51,6 +48,7 @@ export default {
       fontFamily: {
         title: "Bebas Neue, serif",
         poppins: ["Poppins", "sans"],
+        body: "Manrope, serif",
       },
       borderRadius: {
         lg: "var(--radius)",
