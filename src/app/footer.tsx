@@ -1,12 +1,11 @@
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import Link from "next/link";
-import EmailForm from "./email-form";
 
 export default function Footer() {
   return (
     <footer className="mb-16 mt-48 flex flex-wrap justify-between">
       <div>
-        <p className="mb-6 font-title text-6xl">Let's connect</p>
+        <p className="mb-6 font-title text-6xl">Let&apos;s connect</p>
         <p className="text-muted-foreground">
           Say hello at andrei.iatan00@gmail.com
         </p>
