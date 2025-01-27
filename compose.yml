@@ -1,11 +1,11 @@
 services:
   watchtower:
     image: containrrr/watchtower
-    command: 
-      - "--debug"
+    command:
       - "--label-enable"
       - "--interval"
       - "30"
+      - "rolling-restart"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   reverse-proxy:
@@ -14,7 +14,7 @@ services:
       - "--providers.docker"
     ports:
       # The HTTP Port
-      - "443:443" 
+      - "443:443"
       - "80:80"
     volumes:
       # So that Traefik can listen to Docker events
@@ -29,4 +29,3 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.portfolio-prod.rule=Host(`andrei-iatan.com`)"
       - "com.centurylinklabs.watchtower.enable=true"
-
