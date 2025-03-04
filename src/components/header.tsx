@@ -31,17 +31,6 @@ export default function Header() {
               <DrawerTitle>Andrei Iatan</DrawerTitle>
               <DrawerDescription />
             </DrawerHeader>
-            <ul className="p-4">
-              <li className="flex cursor-pointer items-center gap-1 rounded-md p-2 hover:bg-gray-800">
-                Work
-              </li>
-              <li className="flex cursor-pointer items-center gap-1 rounded-md p-2 hover:bg-gray-800">
-                About
-              </li>
-              <li className="flex cursor-pointer items-center gap-1 rounded-md p-2 hover:bg-gray-800">
-                Contact
-              </li>
-            </ul>
             <DrawerFooter>
               <DrawerClose className="flex justify-center">
                 <IconX className="cursor-pointer" />
