@@ -13,7 +13,7 @@ import { IconMenu, IconX } from "@tabler/icons-react";
 export default function Header() {
   return (
     <div className="flex h-20 items-center justify-between px-10">
-      <p className="font-title text-4xl text-muted">Andrei Iatan </p>
+      <p className="font-title text-4xl text-muted">Andrei Iatan</p>
       <div className="hidden sm:block">
         <div className="flex gap-4">
           {/* <p>Work</p>
