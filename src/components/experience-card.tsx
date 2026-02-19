@@ -2,6 +2,67 @@ import React from "react";
 
 const experiences = [
   {
+    role: "Full-Stack Developer",
+    company: "JLG Consulting",
+    date: "Mar 2025 - Present",
+    description: (
+      <ul className="list-disc pl-5">
+        <li>
+          Built and maintained scalable web applications using Angular, TypeScript, and RxJS, ensuring high performance and reactive UI components
+        </li>
+        <li>
+          Developed and integrated RESTful APIs using the Spring Framework
+        </li>
+        <li>
+          Used CI, CD pipelines to deploy and test applications following accurate development lifecycle process
+        </li>
+        <li>
+          Implemented state management and observable patterns using RxJS
+        </li>
+        <li>
+          Applied unit and integration testing best practices on both frontend and backend using Jasmine, Karma
+        </li>
+        <li>
+          Participated in code reviews and architecture discussions to uphold code quality and consistency
+        </li>
+      </ul>
+    ),
+  },
+  {
+    role: "Front-End Developer",
+    company: "Luxoft",
+    date: "Aug 2022 - Aug 2024",
+    description: (
+      <ul className="list-disc pl-5">
+        <li>
+          Developed and maintained banking transfer software, using HTML5,
+          JavaScript, TypeScript, React, CSS, Redux, and MaterialUI to ensure
+          robust functionality and friendly user experience
+        </li>
+        <li>
+          Integrated unit testing methodologies using Jest and the DOM Testing
+          Library
+        </li>
+        <li>
+          Used CI, CD pipelines to deploy and test applications following
+          accurate development lifecycle process
+        </li>
+        <li>
+          Actively participated in UX/UI design meetings to further expand my
+          frontend knowledge
+        </li>
+        <li>
+          Maintained, curated and updated Confluence documentation and Jira
+          tasks using agile techniques
+        </li>
+        <li>
+          Interacted with internal stakeholders to promptly resolve bugs and
+          successfully deliver products
+        </li>
+      </ul>
+    ),
+  },
+  {
     role: "Front-End Developer",
     company: "Luxoft",
     date: "Aug 2022 - Jan 2024",
